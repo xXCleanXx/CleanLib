@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="apiBlueColor">#253688</Color>
+    <Color x:Key="apiLightBlueColor">#46AFEB</Color>
+    <Color x:Key="apiRedColor">#982E5F</Color>
+    <Color x:Key="apiGreen">#8BB113</Color>
+    <Color x:Key="apiTurquise">#119BA4</Color>
+    <SolidColorBrush x:Key="apiBlueBrush" Value="{StaticResources apiBlueColor}"/>
+</ResourceDictionary>
