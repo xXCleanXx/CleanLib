@@ -1,9 +1,5 @@
 ﻿#pragma warning disable S3358 // Ternary operators should not be nested
 
-// 0x66
-// 0xAA
-// 0x55
-
 using System;
 
 namespace CleanLib.Common.Chars {
