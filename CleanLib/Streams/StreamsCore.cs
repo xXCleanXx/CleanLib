@@ -17,9 +17,7 @@ namespace CleanLib.Common.Streams {
             using StreamReader sr = new(stream);
             Stack stack = new();
 
-            while (!sr.EndOfStream) {
-                stack.Push(sr.ReadLine());
-            }
+            while (!sr.EndOfStream) stack.Push(sr.ReadLine());
 
             long bytesWritten = 0;
             stream = new MemoryStream();
