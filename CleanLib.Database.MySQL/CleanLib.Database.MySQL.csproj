@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFrameworks>net462;net5.0;net6.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
   </PropertyGroup>
@@ -13,5 +13,4 @@
   <ItemGroup>
     <ProjectReference Include="..\CleanLib.Database\CleanLib.Database.csproj" />
   </ItemGroup>
-
 </Project>

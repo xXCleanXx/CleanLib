@@ -3,7 +3,12 @@
     <Color x:Key="apiBlueColor">#253688</Color>
     <Color x:Key="apiLightBlueColor">#46AFEB</Color>
     <Color x:Key="apiRedColor">#982E5F</Color>
-    <Color x:Key="apiGreen">#8BB113</Color>
-    <Color x:Key="apiTurquise">#119BA4</Color>
-    <SolidColorBrush x:Key="apiBlueBrush" Value="{StaticResources apiBlueColor}"/>
+    <Color x:Key="apiGreenColor">#8BB113</Color>
+    <Color x:Key="apiTurquiseColor">#119BA4</Color>
+    
+    <SolidColorBrush x:Key="apiBlueBrush" Color="{DynamicResource apiColorBlue}"/>
+    <SolidColorBrush x:Key="apiLightBlueBrush" Color="{DynamicResource apiLightBlueColor}"/>
+    <SolidColorBrush x:Key="apiRedBrush" Color="{DynamicResource apiRedColor}"/>
+    <SolidColorBrush x:Key="apiGreenBrush" Color="{DynamicResource apiGreenColor}"/>
+    <SolidColorBrush x:Key="apiTurquiseBrush" Color="{DynamicResource apiTurquiseColor}"/>
 </ResourceDictionary>
