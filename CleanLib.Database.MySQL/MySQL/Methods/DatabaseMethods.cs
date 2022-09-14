@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace CleanLib.Database.MySQL.Methods;
 
-public class DatabaseMethods : IDatabaseMethods<MySqlParameter>, IDisposable {
+public class DatabaseMethods : IDatabaseMethods<MySqlParameter> {
     private bool _disposedValue;
 
     internal DatabaseMethods(MySqlConnection connection) {
@@ -17,7 +17,37 @@ public class DatabaseMethods : IDatabaseMethods<MySqlParameter>, IDisposable {
         this.Connection = connection;
     }
 
-    public MySqlConnection Connection { get; private set; }
+    public MySqlConnection Connection { get; }
+
+    public IDatabaseMethods<MySqlParameter> ExecuteScalar<T>(string command, out T returnValue, IEnumerable<MySqlParameter> parameters = null) {
+        returnValue = (T)Convert.ChangeType(this.ExecuteScalar(command, parameters), typeof(T));
+
+        return this;
+    }
+
+
+    public T ExecuteScalar<T>(string command, IEnumerable<MySqlParameter> parameters = null) {
+        _ = this.ExecuteScalar<T>(command, out T returnValue, parameters);
+
+        return returnValue;
+    }
+
+    public IDatabaseMethods<MySqlParameter> ExecuteScalar(string command, out object returnValue, IEnumerable<MySqlParameter> parameters = null) {
+        returnValue = this.ExecuteScalar(command, parameters);
+
+        return this;
+    }
+
+    public object ExecuteScalar(string command, IEnumerable<MySqlParameter> parameters = null) {
+        if (string.IsNullOrWhiteSpace(command)) throw new ArgumentException("Command cannot be null, empty or consists of white-spaces!", nameof(command));
+
+        using MySqlCommand cmd = new(command, this.Connection);
+
+        if (parameters is not null && parameters.Any())
+            cmd.Parameters.AddRange(parameters.ToArray());
+
+        return cmd.ExecuteScalar();
+    }
 
     public int ExecuteNonQuery(string command, IEnumerable<MySqlParameter> parameters = null) {
         if (string.IsNullOrWhiteSpace(command)) throw new ArgumentException("Command cannot be null, empty or consists of white-spaces!", nameof(command));
@@ -43,9 +73,8 @@ public class DatabaseMethods : IDatabaseMethods<MySqlParameter>, IDisposable {
 
         using MySqlCommand cmd = new(command, this.Connection);
 
-        if (parameters is not null && parameters.Any()) {
+        if (parameters is not null && parameters.Any())
             cmd.Parameters.AddRange(parameters.ToArray());
-        }
 
         using MySqlDataAdapter da = new(cmd);
         da.Fill(dataTable);
@@ -61,17 +90,42 @@ public class DatabaseMethods : IDatabaseMethods<MySqlParameter>, IDisposable {
         return dataTable;
     }
 
-    public IDatabaseMethods<MySqlParameter> GetFilledDataTable(string command, out DataTable dataTable, IEnumerable<MySqlParameter> parameters = null) {
+    public IDatabaseMethods<MySqlParameter> GetFilledDataTable(string command, out DataTable dataTable, IEnumerable<MySqlParameter> parameters = null, string sourceTable) {
         dataTable = this.GetFilledDataTable(command, parameters);
 
         return this;
     }
 
+    public IDatabaseMethods<MySqlParameter> FillDataSet(string command, DataSet dataSet, string sourceTable = null, IEnumerable<MySqlParameter> parameters = null) {
+        using MySqlCommand cmd = new(command, this.Connection);
+
+        if (parameters is not null && parameters.Any())
+            cmd.Parameters.AddRange(parameters.ToArray());
+
+        using MySqlDataAdapter da = new(cmd);
+
+        da.Fill(dataSet, sourceTable);
+
+        return this;
+    }
+
+    public IDatabaseMethods<MySqlParameter> GetFilledDataSet(string command, out DataSet dataSet, string sourceTable = null, IEnumerable<MySqlParameter> parameters = null) {
+        dataSet = new();
+
+        this.FillDataSet(command, dataSet, sourceTable, parameters);
+    }
+
+    public DataSet GetFilledDataSet(string command, string sourceTable = null, IEnumerable<MySqlParameter> parameters = null) {
+        DataSet dataSet = new();
+
+        _ = this.FillDataSet(command, dataSet, sourceTable, parameters);
+
+        return dataSet;
+    }
+
     protected virtual void Dispose(bool disposing) {
         if (!this._disposedValue) {
-            if (disposing) {
-                this.Connection.Dispose();
-            }
+            if (disposing) this.Connection.Dispose();
 
             this._disposedValue = true;
         }
@@ -81,4 +135,5 @@ public class DatabaseMethods : IDatabaseMethods<MySqlParameter>, IDisposable {
         this.Dispose(true);
         GC.SuppressFinalize(this);
     }
+
 }

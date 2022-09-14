@@ -1,14 +1,17 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Color x:Key="apiBlueColor">#253688</Color>
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary x:Name="colors" Source="/CleanLib.Wpf;component/Themes/Colors/Colors.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <Color x:Key="apiBlueColor">#243688</Color>
     <Color x:Key="apiLightBlueColor">#46AFEB</Color>
     <Color x:Key="apiRedColor">#982E5F</Color>
     <Color x:Key="apiGreenColor">#8BB113</Color>
     <Color x:Key="apiTurquiseColor">#119BA4</Color>
-    
-    <SolidColorBrush x:Key="apiBlueBrush" Color="{DynamicResource apiColorBlue}"/>
-    <SolidColorBrush x:Key="apiLightBlueBrush" Color="{DynamicResource apiLightBlueColor}"/>
-    <SolidColorBrush x:Key="apiRedBrush" Color="{DynamicResource apiRedColor}"/>
-    <SolidColorBrush x:Key="apiGreenBrush" Color="{DynamicResource apiGreenColor}"/>
-    <SolidColorBrush x:Key="apiTurquiseBrush" Color="{DynamicResource apiTurquiseColor}"/>
+
+    <SolidColorBrush x:Key="apiBlueBrush" Color="{StaticResource apiBlueColor}"/>
+    <SolidColorBrush x:Key="apiLightBlueBrush" Color="{StaticResource apiLightBlueColor}"/>
+    <SolidColorBrush x:Key="apiRedBrush" Color="{StaticResource apiRedColor}"/>
+    <SolidColorBrush x:Key="apiGreenBrush" Color="{StaticResource apiGreenColor}"/>
+    <SolidColorBrush x:Key="apiTurquiseBrush" Color="{StaticResource apiTurquiseColor}"/>
 </ResourceDictionary>
