@@ -1,7 +1,5 @@
 ﻿using CleanLib.Math.Expressions.Abstractions;
 using CleanLib.Math.Tokens.Abstractions;
-using System.ComponentModel.DataAnnotations;
-using System.Security.Cryptography.X509Certificates;
 using System.Text.RegularExpressions;
 
 namespace CleanLib.Math.Expressions {
@@ -11,9 +9,10 @@ namespace CleanLib.Math.Expressions {
 
         }
 
-        public TokenBase GetToken() {
-            Regex regex = new(base.Regex);
-            regex.Match(base.Input, )
+        public override TokenBase GetToken() {
+            //Regex regex = new(base.Regex);
+            //regex.Match(base.Input, )
+            return null;
         }
     }
 }

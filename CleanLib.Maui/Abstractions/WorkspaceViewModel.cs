@@ -1,4 +1,4 @@
-﻿using CleanLib.XAML.Interfaces;
+﻿using CleanLib.Xaml.Interfaces;
 using Microsoft.Maui.Controls;
 
 namespace CleanLib.Maui.Abstractions;

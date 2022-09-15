@@ -90,7 +90,7 @@ public class DatabaseMethods : IDatabaseMethods<MySqlParameter> {
         return dataTable;
     }
 
-    public IDatabaseMethods<MySqlParameter> GetFilledDataTable(string command, out DataTable dataTable, IEnumerable<MySqlParameter> parameters = null, string sourceTable) {
+    public IDatabaseMethods<MySqlParameter> GetFilledDataTable(string command, out DataTable dataTable, IEnumerable<MySqlParameter> parameters = null) {
         dataTable = this.GetFilledDataTable(command, parameters);
 
         return this;
@@ -112,7 +112,7 @@ public class DatabaseMethods : IDatabaseMethods<MySqlParameter> {
     public IDatabaseMethods<MySqlParameter> GetFilledDataSet(string command, out DataSet dataSet, string sourceTable = null, IEnumerable<MySqlParameter> parameters = null) {
         dataSet = new();
 
-        this.FillDataSet(command, dataSet, sourceTable, parameters);
+        return this.FillDataSet(command, dataSet, sourceTable, parameters);
     }
 
     public DataSet GetFilledDataSet(string command, string sourceTable = null, IEnumerable<MySqlParameter> parameters = null) {
@@ -135,5 +135,4 @@ public class DatabaseMethods : IDatabaseMethods<MySqlParameter> {
         this.Dispose(true);
         GC.SuppressFinalize(this);
     }
-
 }

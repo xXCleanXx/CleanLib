@@ -4,6 +4,10 @@
     <LangVersion>latest</LangVersion>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
+    <Authors>Sebastian Erdweg</Authors>
+    <Copyright>©2022 Sebastian Erdweg</Copyright>
+    <Description>Library for common code.</Description>
+    <Version>1.0.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

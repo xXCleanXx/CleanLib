@@ -24,9 +24,9 @@ public interface IDatabaseMethods<DerivedParameter> : IDisposable where DerivedP
 
     IDatabaseMethods<DerivedParameter> GetFilledDataTable(string command, out DataTable dataTable, IEnumerable<DerivedParameter> parameters = null);
 
-    IDatabaseMethods<DerivedParameter> FillDataSet(string command, DataSet dataSet, IEnumerable<DerivedParameter> parameters = null);
+    IDatabaseMethods<DerivedParameter> FillDataSet(string command, DataSet dataSet, string sourceTable = null, IEnumerable<DerivedParameter> parameters = null);
 
-    IDatabaseMethods<DerivedParameter> GetFilledDataSet(string command, out DataSet dataSet, IEnumerable<DerivedParameter> parameters = null);
+    IDatabaseMethods<DerivedParameter> GetFilledDataSet(string command, out DataSet dataSet, string sourceTable = null, IEnumerable<DerivedParameter> parameters = null);
 
-    DataSet GetFilledDataSet(string command, IEnumerable<DerivedParameter> parameters = null);
+    DataSet GetFilledDataSet(string command, string sourceTable = null, IEnumerable<DerivedParameter> parameters = null);
 }

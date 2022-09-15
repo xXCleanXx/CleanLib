@@ -1,5 +1,5 @@
 ﻿using CleanLib.Wpf.Controls;
-using CleanLib.XAML.Interfaces;
+using CleanLib.Xaml.Interfaces;
 
 namespace CleanLib.Wpf.Abstractions;
 

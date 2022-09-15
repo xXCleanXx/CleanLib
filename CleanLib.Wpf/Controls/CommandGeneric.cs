@@ -29,6 +29,10 @@ public sealed class Command<T> : ICommand {
         this._execute = new((param) => execute());
     }
 
+    public void ChangeCanExecute() {
+        this.CanExecuteChanged?.Invoke(nameof(ChangeCanExecute), EventArgs.Empty);
+    }
+
     public bool CanExecute(object parameter)
         => this._canExecute == null || this._canExecute((T)parameter);
 

@@ -39,7 +39,6 @@ namespace CleanLibTests.Streams {
 
         [Test]
         [Ignore("This is a benchmark")]
-#pragma warning disable S2699 // Tests should include assertions
         public void Benchmark() {
             Stopwatch sw = new();
 
@@ -107,7 +106,6 @@ namespace CleanLibTests.Streams {
             Debug.Print($"Avg 512: {TimeSpan.FromMilliseconds(ts512.Average(x => x.TotalMilliseconds)):ss\\:ffffff}");
             Debug.Print($"Avg 4096: {TimeSpan.FromMilliseconds(ts4096.Average(x => x.TotalMilliseconds)):ss\\:ffffff}");
         }
-#pragma warning restore S2699 // Tests should include assertions
 
         [Test]
         public void SizeTest() {

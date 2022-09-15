@@ -4,7 +4,6 @@ using CleanLib.Database.Methods.Interfaces;
 using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.Data;
-using System.Runtime.CompilerServices;
 
 namespace CleanLib.Database.MySQL.Methods.Lazy;
 
@@ -35,17 +34,18 @@ public static class MySQLMethodsLazy {
         return dataTable;
     }
 
-    public static void FillDataTable(string command, DataTable dataTable, IEnumerable<MySqlParameter> parameters = null) {
-        DatabaseMethods.FillDataTable(command, dataTable, parameters).Dispose();
-    }
+    public static void FillDataTable(string command, DataTable dataTable, IEnumerable<MySqlParameter> parameters = null)
+        => DatabaseMethods.FillDataTable(command, dataTable, parameters).Dispose();
 
-    public static DataSet GetFilledDataSet(string command, IEnumerable<MySqlParameter> parameters = null, string ) {
-        DatabaseMethods.GetFilledDataSet(command, out DataSet dataSet, parameters).Dispose();
+    public static DataSet GetFilledDataSet(string command, string sourceTable = null, IEnumerable<MySqlParameter> parameters = null) {
+        DatabaseMethods.GetFilledDataSet(command, out DataSet dataSet, sourceTable, parameters).Dispose();
 
         return dataSet;
     }
 
-    public static void FillDataSet(string command, DataSet dataSet, IEnumerable<MySqlParameter> parameters = null) {
-        DatabaseMethods.FillDataSet
-    }
+    public static void GetFilledDataSet(string command, out DataSet dataSet, string sourceTable = null, IEnumerable<MySqlParameter> parameters = null)
+        => DatabaseMethods.GetFilledDataSet(command, out dataSet, sourceTable, parameters).Dispose();
+
+    public static void FillDataSet(string command, DataSet dataSet, string sourceTable = null, IEnumerable<MySqlParameter> parameters = null)
+        => DatabaseMethods.FillDataSet(command, dataSet, sourceTable, parameters).Dispose();
 }
