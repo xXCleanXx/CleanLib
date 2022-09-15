@@ -11,19 +11,34 @@
     <SolidColorBrush x:Key="primaryBrush" Color="{StaticResource apiBlueColor}"/>
     <SolidColorBrush x:Key="secondaryBrush" Color="{StaticResource secondaryColor}"/>
     <SolidColorBrush x:Key="tertiaryBrush" Color="{StaticResource tertiaryColor}"/>
+    <SolidColorBrush x:Key="accentBrush" Color="{StaticResource accentColor}"/>
     <SolidColorBrush x:Key="foregroundBrush" Color="{StaticResource lightGrayColor}"/>
     <SolidColorBrush x:Key="backgroundBrush" Color="{StaticResource grayColor}"/>
-    
-    <CornerRadius x:Key="cornerRadius">5</CornerRadius>
 
+    <CornerRadius x:Key="cornerRadius">10</CornerRadius>
+
+    <Style x:Key="focusVisualStyle">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border Margin="-2" BorderThickness="1" BorderBrush="{StaticResource accentBrush}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
     <Style x:Key="buttonBaseStyle" TargetType="Button">
         <Setter Property="Background" Value="{StaticResource apiBlueBrush}"/>
-        <Setter Property="Foreground" Value="White"/>
-        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{StaticResource foregroundBrush}"/>
+        <Setter Property="FocusVisualStyle" Value="{StaticResource focusVisualStyle}"/>
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
 
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="{StaticResource tertiaryBrush}"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{StaticResource secondaryBrush}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -40,7 +55,17 @@
         </Setter>
     </Style>
 
-    <Style x:Key="buttonStyle" TargetType="Button" BasedOn="{StaticResource buttonBaseStyle}"/>
+    <Style x:Key="buttonStyle" TargetType="Button" BasedOn="{StaticResource buttonBaseStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" Padding="5">
+                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
     <Style x:Key="borderStyle" TargetType="Border">
         <Setter Property="Background" Value="Transparent"/>
@@ -50,15 +75,18 @@
         <Setter Property="BorderThickness" Value="2"/>
     </Style>
 
-    <Style x:Key="dataGridRowHeaderStyle" TargetType="DataGridRowHeader">
+    <Style x:Key="dataGridColumnHeaderStyle" TargetType="DataGridColumnHeader">
         <Setter Property="Foreground" Value="{StaticResource foregroundBrush}"/>
         <Setter Property="Background" Value="{StaticResource secondaryBrush}"/>
-        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="5"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource tertiaryBrush}"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
-    
-    <Style x:Key="dataGridRowStyle" TargetType="DataGridRow">
-        <Setter Property="HeaderStyle" Value="{StaticResource dataGridRowHeaderStyle}"/>
 
+    <Style x:Key="dataGridRowStyle" TargetType="DataGridRow">
         <Style.Triggers>
             <Trigger Property="ItemsControl.AlternationIndex" Value="0">
                 <Setter Property="Background" Value="{StaticResource primaryBrush}"/>
@@ -68,21 +96,54 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-    
+
     <Style x:Key="dataGridStyle" TargetType="DataGrid">
         <Setter Property="AlternationCount" Value="2"/>
         <Setter Property="Background" Value="{StaticResource primaryBrush}"/>
-        <Setter Property="Foreground" Value="{StaticResource light}"/>
+        <Setter Property="Foreground" Value="{StaticResource lightGrayBrush}"/>
         <Setter Property="RowStyle" Value="{StaticResource dataGridRowStyle}"/>
+        <Setter Property="ColumnHeaderStyle" Value="{StaticResource dataGridColumnHeaderStyle}"/>
     </Style>
 
-    <Style x:Key="comboBoxItem" TargetType="ComboBoxItem">
+    <Style x:Key="progressBarStyle" TargetType="ProgressBar">
+        <Setter Property="Foreground" Value="{StaticResource secondaryBrush}"/>
+        <Setter Property="Background" Value="{StaticResource primaryBrush}"/>
+        <Setter Property="MinHeight" Value="25"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ProgressBar">
+                    <Grid>
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="10"/>
+                        <Rectangle x:Name="PART_Track"/>
+                        <Grid x:Name="PART_Indicator" ClipToBounds="True" HorizontalAlignment="Left">
+                            <Rectangle x:Name="Indicator" Fill="{TemplateBinding Foreground}" RadiusX="10" RadiusY="10"/>
+                            <Rectangle x:Name="Animaton" Fill="{TemplateBinding Foreground}" RenderTransformOrigin="0.5,0.5" RadiusX="10" RadiusY="10">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="comboBoxItemStyle" TargetType="ComboBoxItem">
         <Setter Property="Background" Value="{StaticResource primaryBrush}"/>
         <Setter Property="Foreground" Value="{StaticResource foregroundBrush}"/>
     </Style>
 
-    <Style x:Key="comboBox" TargetType="ComboBox">
+    <Style x:Key="comboBoxStyle" TargetType="ComboBox">
         <Setter Property="Background" Value="{StaticResource primaryBrush}"/>
         <Setter Property="Foreground" Value="{StaticResource foregroundBrush}"/>
+        <Setter Property="BorderBrush" Value="Red"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource comboBoxItemStyle}"/>
     </Style>
 </ResourceDictionary>

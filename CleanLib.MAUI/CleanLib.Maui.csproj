@@ -15,7 +15,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\CleanLib.XAML\CleanLib.XAML.csproj" />
+	  <ProjectReference Include="..\CleanLib.Xaml\CleanLib.Xaml.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

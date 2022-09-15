@@ -1,4 +1,4 @@
-﻿namespace CleanLib.XAML.Interfaces;
+﻿namespace CleanLib.Xaml.Interfaces;
 
 public interface ICloseable {
     void Close();

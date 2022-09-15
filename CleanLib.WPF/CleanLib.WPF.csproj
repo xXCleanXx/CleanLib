@@ -5,7 +5,7 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CleanLib.XAML\CleanLib.XAML.csproj" />
+    <ProjectReference Include="..\CleanLib.Xaml\CleanLib.Xaml.csproj" />
     <ProjectReference Include="..\CleanLib\CleanLib.Common.csproj" />
   </ItemGroup>
   <ItemGroup>

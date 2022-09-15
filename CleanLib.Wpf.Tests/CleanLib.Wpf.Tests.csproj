@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CleanLib.Wpf.Controls\CleanLib.Wpf.Controls.csproj" />
-    <ProjectReference Include="..\CleanLib.WPF\CleanLib.Wpf.csproj" />
+    <ProjectReference Include="..\CleanLib.Wpf\CleanLib.Wpf.csproj" />
   </ItemGroup>
 
 </Project>

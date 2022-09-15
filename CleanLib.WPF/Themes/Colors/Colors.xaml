@@ -4,6 +4,7 @@
     <Color x:Key="lightGrayColor">#FAFAFA</Color>
     <Color x:Key="redColor">#AA5566</Color>
     <Color x:Key="orangeColor">#AA6655</Color>
+    <Color x:Key="yellowColor">#AAAA55</Color>
     <Color x:Key="greenColor">#55AA66</Color>
     <Color x:Key="lightGreenColor">#66AA55</Color>
     <Color x:Key="blueColor">#5566AA</Color>
@@ -13,6 +14,7 @@
     <SolidColorBrush x:Key="lightGrayBrush" Color="{StaticResource lightGrayColor}"/>
     <SolidColorBrush x:Key="redBrush" Color="{StaticResource redColor}"/>
     <SolidColorBrush x:Key="orangeBrush" Color="{StaticResource orangeColor}"/>
+    <SolidColorBrush x:Key="yellowBrush" Color="{StaticResource yellowColor}"/>
     <SolidColorBrush x:Key="greenBrush" Color="{StaticResource greenColor}"/>
     <SolidColorBrush x:Key="lightGreenBrush" Color="{StaticResource lightGreenColor}"/>
     <SolidColorBrush x:Key="blueBrush" Color="{StaticResource blueColor}"/>

@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Database.MySQL", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Database", "CleanLib.Database\CleanLib.Database.csproj", "{7842F1EF-FA7B-40CB-B7C9-18A62842FDE1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Wpf", "CleanLib.WPF\CleanLib.Wpf.csproj", "{E06DBD46-8CF4-4134-9758-B3F49DE7AABA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Wpf", "CleanLib.Wpf\CleanLib.Wpf.csproj", "{E06DBD46-8CF4-4134-9758-B3F49DE7AABA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Wpf.Controls", "CleanLib.Wpf.Controls\CleanLib.Wpf.Controls.csproj", "{5AEAA4BF-F21D-4A5D-B9C6-2CE34720D604}"
 EndProject
@@ -19,9 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Wpf.Tests", "Clean
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Math", "Math\CleanLib.Math.csproj", "{55881D37-C0C4-4573-87B1-4A7E2E6746D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanLib.XAML", "CleanLib.XAML\CleanLib.XAML.csproj", "{1DF4BE8C-B8E9-47B8-8C0A-A53F07D45E92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Xaml", "CleanLib.Xaml\CleanLib.Xaml.csproj", "{1DF4BE8C-B8E9-47B8-8C0A-A53F07D45E92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanLib.Maui", "CleanLib.MAUI\CleanLib.Maui.csproj", "{D2A2E8AA-F416-4294-BD01-3CEE6A427621}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Maui", "CleanLib.Maui\CleanLib.Maui.csproj", "{D2A2E8AA-F416-4294-BD01-3CEE6A427621}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

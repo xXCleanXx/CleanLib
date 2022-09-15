@@ -1,8 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary x:Name="colors" Source="/CleanLib.Wpf;component/Themes/Colors/Colors.xaml"/>
+        <ResourceDictionary Source="/CleanLib.Wpf;component/Themes/Colors/Colors.xaml"/>
     </ResourceDictionary.MergedDictionaries>
+    
     <Color x:Key="apiBlueColor">#243688</Color>
     <Color x:Key="apiLightBlueColor">#46AFEB</Color>
     <Color x:Key="apiRedColor">#982E5F</Color>

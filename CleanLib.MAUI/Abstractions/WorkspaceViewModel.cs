@@ -1,7 +1,7 @@
 ﻿using CleanLib.XAML.Interfaces;
 using Microsoft.Maui.Controls;
 
-namespace CleanLib.Maui.Absrtactions;
+namespace CleanLib.Maui.Abstractions;
 
 public abstract class WorkspaceViewModel {
     public Command<ICloseable> CloseCommand { get; }
