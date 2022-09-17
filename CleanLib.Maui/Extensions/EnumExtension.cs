@@ -13,7 +13,7 @@ public class EnumExtension : IMarkupExtension<IEnumerable<EnumDescription>> {
     }
 
     public IEnumerable<EnumDescription> ProvideValue(IServiceProvider serviceProvider)
-        => this._enumExtensionBase.ProvideValue();
+        => this.ProvideValue(serviceProvider);
 
     object IMarkupExtension.ProvideValue(IServiceProvider serviceProvider)
         => this._enumExtensionBase.ProvideValue();

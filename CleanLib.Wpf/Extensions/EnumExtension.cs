@@ -15,6 +15,6 @@ public class EnumExtension : MarkupExtension {
         => this._enumExtensionBase.ProvideValue();
 
     private sealed class Base : EnumExtensionBase {
-        public Base(Type enumType) : base(enumType) { }
+        internal Base(Type enumType) : base(enumType) { }
     }
 }
