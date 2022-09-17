@@ -1,6 +1,6 @@
 using Microsoft.Maui.Controls;
 
-namespace CleanLib.Maui.Themes.Styles.Colors;
+namespace CleanLib.Maui.Themes.Colors;
 
 public partial class Colors : ResourceDictionary
 {

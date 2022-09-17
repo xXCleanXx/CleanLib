@@ -16,16 +16,13 @@
 		<SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('-windows'))">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$(TargetFramework.Contains('-windows'))">10.0.17763.0</TargetPlatformMinVersion>
 	</PropertyGroup>
-
-  <ItemGroup>
-    <None Include="Resources\icon.svg" Pack="true" PackagePath="\"/>
-  </ItemGroup>
   
 	<ItemGroup>
 	  <ProjectReference Include="..\CleanLib.Xaml\CleanLib.Xaml.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Resources\" />
 	  <Folder Include="Themes\Styles\" />
 	</ItemGroup>
 
