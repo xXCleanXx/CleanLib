@@ -1,7 +1,9 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CleanLib.Maui.Themes.Colors.ApiColors">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/CleanLib.Wpf;component/Themes/Colors/Colors.xaml"/>
+        <ResourceDictionary Source="/CleanLib.Maui;component/Themes/Colors/Colors.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
     <Color x:Key="apiBlueColor">#243688</Color>

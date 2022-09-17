@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 namespace CleanLib.Wpf.Controls;
 
-public sealed class Command : ICommand {
+public class Command : ICommand {
     public event EventHandler CanExecuteChanged;
 
     private Action<object> _execute;
@@ -20,13 +20,13 @@ public sealed class Command : ICommand {
 
     public Command(Action execute, Func<bool> canExecute) {
         this.SetExecute(execute);
-        this._canExecute = canExecute != null ? new Func<object, bool>((param) => canExecute()) : this._canExecute;
+        this._canExecute = canExecute != null ? new Func<object, bool>(param => canExecute()) : this._canExecute;
     }
 
     private void SetExecute(Action execute) {
         if (execute == null) throw new ArgumentNullException(nameof(execute), "Execute cannot be null!");
 
-        this._execute = new((param) => execute());
+        this._execute = new(param => execute());
     }
 
     public void ChangeCanExecute() {

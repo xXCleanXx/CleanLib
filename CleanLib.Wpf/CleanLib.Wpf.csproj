@@ -6,6 +6,7 @@
     <Authors>Sebastian Erdweg</Authors>
     <Copyright>©2022 Sebastian Erdweg</Copyright>
     <Version>1.0.0.1</Version>
+    <ApplicationIcon>Resources\</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Interfaces\**" />

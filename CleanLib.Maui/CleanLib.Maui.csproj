@@ -9,7 +9,7 @@
     <Authors>Sebastian Erdweg</Authors>
     <Copyright>©2022 Sebastian Erdweg</Copyright>
     <Description>Library for .NET Maui Applications.</Description>
-
+    <PackageIcon>Resources\icon.svg</PackageIcon>
 		<SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-ios'">14.2</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-maccatalyst'">14.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-android'">21.0</SupportedOSPlatformVersion>
@@ -17,11 +17,30 @@
 		<TargetPlatformMinVersion Condition="$(TargetFramework.Contains('-windows'))">10.0.17763.0</TargetPlatformMinVersion>
 	</PropertyGroup>
 
+  <ItemGroup>
+    <None Include="Resources\icon.svg" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+  
 	<ItemGroup>
 	  <ProjectReference Include="..\CleanLib.Xaml\CleanLib.Xaml.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Themes\" />
+	  <Folder Include="Themes\Styles\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Themes\Colors\ApiColors.xaml.cs">
+	    <DependentUpon>ApiColors.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Themes\Colors\ApiColors.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Themes\Colors\Colors.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 </Project>

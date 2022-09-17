@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CleanLib.Maui.Themes.Styles.Colors.Colors">
+    <Color x:Key="grayColor">#2F2F2F</Color>
+    <Color x:Key="lightGrayColor">#FAFAFA</Color>
+    <Color x:Key="redColor">#AA5566</Color>
+    <Color x:Key="orangeColor">#AA6655</Color>
+    <Color x:Key="yellowColor">#AAAA55</Color>
+    <Color x:Key="greenColor">#55AA66</Color>
+    <Color x:Key="lightGreenColor">#66AA55</Color>
+    <Color x:Key="blueColor">#5566AA</Color>
+    <Color x:Key="purpleColor">#6655AA</Color>
+
+    <SolidColorBrush x:Key="grayBrush" Color="{StaticResource grayColor}"/>
+    <SolidColorBrush x:Key="lightGrayBrush" Color="{StaticResource lightGrayColor}"/>
+    <SolidColorBrush x:Key="redBrush" Color="{StaticResource redColor}"/>
+    <SolidColorBrush x:Key="orangeBrush" Color="{StaticResource orangeColor}"/>
+    <SolidColorBrush x:Key="yellowBrush" Color="{StaticResource yellowColor}"/>
+    <SolidColorBrush x:Key="greenBrush" Color="{StaticResource greenColor}"/>
+    <SolidColorBrush x:Key="lightGreenBrush" Color="{StaticResource lightGreenColor}"/>
+    <SolidColorBrush x:Key="blueBrush" Color="{StaticResource blueColor}"/>
+    <SolidColorBrush x:Key="purpleBrush" Color="{StaticResource purpleColor}"/>
+</ResourceDictionary>
