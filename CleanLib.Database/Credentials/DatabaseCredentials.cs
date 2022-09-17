@@ -1,15 +1,22 @@
-﻿namespace CleanLib.Database.Credentials;
+﻿using CleanLib.Database.Credentials.Interfaces;
+using System.Net;
+using System.Security;
 
-public class DatabaseCredentials {
-    public string Username { get; }
-    public string Password { get; }
-    public string Server { get; }
-    public uint Port { get; }
+namespace CleanLib.Database.Credentials;
 
-    public DatabaseCredentials(string username, string password, string server, uint port) {
-        this.Username = username;
-        this.Password = password;
-        this.Server = server;
+public class DatabaseCredentials : NetworkCredential, IDatabaseCredentials {
+    public uint Port { get; set; }
+    public string ConnectionString { get; set; }
+
+    public DatabaseCredentials(string userName, string password, string server, uint port) : base(userName, password, server) {
         this.Port = port;
+    }
+
+    public DatabaseCredentials(string userName, SecureString password, string server, uint port) : base(userName, password, server) {
+        this.Port = port;
+    }
+
+    public DatabaseCredentials(string connectionString) {
+        this.ConnectionString = connectionString;
     }
 }

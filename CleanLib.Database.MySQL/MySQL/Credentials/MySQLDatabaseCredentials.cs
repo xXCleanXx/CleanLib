@@ -6,14 +6,16 @@ using MySql.Data.MySqlClient;
 namespace CleanLib.Database.MySQL.Credentials;
 
 public class MySQLDatabaseCredentials : DatabaseCredentials {
-    public string ConnectionString { get; set; }
-
-    public MySQLDatabaseCredentials(string username, string password, string server, uint port) : base(username, password, server, port) {
-        this.ConnectionString = new MySqlConnectionStringBuilder() {
-            UserID = base.Username,
+    public MySQLDatabaseCredentials(string userName, string password, string server, uint port) : base(userName, password, server, port) {
+        base.ConnectionString = new MySqlConnectionStringBuilder() {
+            UserID = base.UserName,
             Password = base.Password,
-            Server = base.Server,
+            Server = base.Domain,
             Port = base.Port,
         }.ConnectionString;
+    }
+
+    public MySQLDatabaseCredentials(string connectionString) : base(connectionString) {
+        base.ConnectionString = new MySqlConnectionStringBuilder(connectionString).ConnectionString;
     }
 }
