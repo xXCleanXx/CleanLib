@@ -16,6 +16,4 @@ using System.Windows.Markup;
 // The following GUID is for the ID of the typelib if this project is exposed to COM.
 
 [assembly: Guid("eac5b062-2724-4144-bf78-721a082e8626")]
-[assembly: XmlnsDefinition("http://schemas.cleanlib.com/", "CleanLib.Wpf.Themes.Styles")]
-[assembly: XmlnsDefinition("http://schemas.cleanlib.com/", "CleanLib.Wpf.Themes.Colors")]
-[assembly: XmlnsDefinition("http://schemas.cleanlib.com/", "CleanLib.Wpf.Themes.Extensions")]
+[assembly: XmlnsDefinition("http://schemas.cleanlib.com/", "CleanLib.Wpf.Extensions")]
