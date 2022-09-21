@@ -2,7 +2,7 @@
 
 using System;
 
-namespace CleanLib.Common.Dates.Extensions;
+namespace CleanLib.Dates.Extensions;
 
 public static class DatesExtensions {
     public static string ToGermanFormat(this DateTime dateTime, bool onlyDate = true)

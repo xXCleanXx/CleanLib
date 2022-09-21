@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace CleanLib.Common.Cryptography {
+namespace CleanLib.Cryptography {
     public class Base64Encryption {
         public static string Encode(string plainText) {
             byte[] plainTextBytes = Encoding.UTF8.GetBytes(plainText);

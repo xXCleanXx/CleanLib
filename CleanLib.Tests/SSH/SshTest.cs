@@ -1,4 +1,4 @@
-﻿using CleanLib.Common.SSH;
+﻿using CleanLib.SSH;
 using NUnit.Framework;
 using Renci.SshNet;
 using System;

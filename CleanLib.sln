@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32120.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Common", "CleanLib\CleanLib.Common.csproj", "{43D1E51C-3A3B-4803-AA70-5E1E6E8D726D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib", "CleanLib\CleanLib.csproj", "{43D1E51C-3A3B-4803-AA70-5E1E6E8D726D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLibTests", "CleanLibTests\CleanLibTests.csproj", "{D5855E2D-8C63-4403-B25E-BA19450F2176}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Tests", "CleanLib.Tests\CleanLib.Tests.csproj", "{D5855E2D-8C63-4403-B25E-BA19450F2176}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Database.MySQL", "CleanLib.Database.MySQL\CleanLib.Database.MySQL.csproj", "{5E49DE88-9B68-4182-A85F-084E2E16092A}"
 EndProject
@@ -17,11 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Wpf.Controls", "Cl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Wpf.Tests", "CleanLib.Wpf.Tests\CleanLib.Wpf.Tests.csproj", "{6DA3B47C-6180-43B5-B5B2-4AEA4CB7EBB0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Math", "Math\CleanLib.Math.csproj", "{55881D37-C0C4-4573-87B1-4A7E2E6746D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Math", "CleanLib.Math\CleanLib.Math.csproj", "{55881D37-C0C4-4573-87B1-4A7E2E6746D1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Xaml", "CleanLib.Xaml\CleanLib.Xaml.csproj", "{1DF4BE8C-B8E9-47B8-8C0A-A53F07D45E92}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanLib.Maui", "CleanLib.Maui\CleanLib.Maui.csproj", "{D2A2E8AA-F416-4294-BD01-3CEE6A427621}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanLib.Maui.Tests", "CleanLib.Maui.Tests\CleanLib.Maui.Tests.csproj", "{7F9A0C26-8788-41AD-BBE5-DE0F02DDAE0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,12 @@ Global
 		{D2A2E8AA-F416-4294-BD01-3CEE6A427621}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2A2E8AA-F416-4294-BD01-3CEE6A427621}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2A2E8AA-F416-4294-BD01-3CEE6A427621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F9A0C26-8788-41AD-BBE5-DE0F02DDAE0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F9A0C26-8788-41AD-BBE5-DE0F02DDAE0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F9A0C26-8788-41AD-BBE5-DE0F02DDAE0E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7F9A0C26-8788-41AD-BBE5-DE0F02DDAE0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F9A0C26-8788-41AD-BBE5-DE0F02DDAE0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F9A0C26-8788-41AD-BBE5-DE0F02DDAE0E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

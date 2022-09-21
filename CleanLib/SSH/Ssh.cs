@@ -1,6 +1,6 @@
 ﻿using Renci.SshNet;
 
-namespace CleanLib.Common.SSH {
+namespace CleanLib.SSH {
     public class Ssh {
         public SshClient SshClient { get; private set; }
         public ConnectionInfo ConnectionInfo { get; private set; }

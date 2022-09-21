@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CleanLib.Common.Enumerations.Extensions;
+namespace CleanLib.Enumerations.Extensions;
 
 public static class EnumerationsExtensions {
     public static int CountFlags(this Enum @enum) {

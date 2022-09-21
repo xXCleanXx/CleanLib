@@ -1,4 +1,4 @@
-﻿namespace CleanLib.Common.Booleans;
+﻿namespace CleanLib.Booleans;
 
 public class BooleansCore {
 }

@@ -2,7 +2,7 @@
 using System;
 using System.Text;
 
-namespace CleanLib.Common.SSH {
+namespace CleanLib.SSH {
     public class SshMethods : IDisposable {
         private bool _disposedValue;
 

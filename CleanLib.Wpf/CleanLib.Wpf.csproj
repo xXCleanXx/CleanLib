@@ -9,6 +9,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\CleanLib.Xaml\CleanLib.Xaml.csproj" />
-    <ProjectReference Include="..\CleanLib\CleanLib.Common.csproj"/>
+    <ProjectReference Include="..\CleanLib\CleanLib.csproj" />
   </ItemGroup>
 </Project>

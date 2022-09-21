@@ -1,6 +1,6 @@
 ﻿#pragma warning disable S3358 // Ternary operators should not be nested
 
-namespace CleanLib.Common.Booleans.Extensions;
+namespace CleanLib.Booleans.Extensions;
 
 public static class BooleansExtensions {
     public static string ToWord(this bool boolean, bool german = false)

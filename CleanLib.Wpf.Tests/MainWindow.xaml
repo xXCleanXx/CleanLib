@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CleanLib.Wpf.Tests"
+        xmlns:clean="http://schemas.cleanlib.com/"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Border Style="{StaticResource borderStyle}" Margin="10">
@@ -21,6 +22,7 @@
             <Button Content="Button" Style="{StaticResource buttonStyle}" Margin="10"/>
             <Button Content="Round Button" Style="{StaticResource roundButtonStyle}" Margin="10" Grid.Column="1"/>
             <ProgressBar Style="{StaticResource progressBarStyle}" Value="90" Margin="10" Grid.Row="1"/>
+            <ComboBox ItemsSource="{Binding Source={clean:Enum local:TestEnum}}" Grid.Column="1" Grid.Row="1"/>
             <DataGrid Style="{StaticResource dataGridStyle}" Grid.Row="2" Grid.ColumnSpan="2">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Test"/>

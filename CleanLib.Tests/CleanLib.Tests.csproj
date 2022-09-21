@@ -16,6 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CleanLib\CleanLib.Common.csproj" />
+    <ProjectReference Include="..\CleanLib\CleanLib.csproj" />
   </ItemGroup>
 </Project>

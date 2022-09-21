@@ -1,4 +1,4 @@
-﻿namespace CleanLib.Common.SSH {
+﻿namespace CleanLib.SSH {
     public class SshCommandResult {
         public string Command { get; private set; }
         public string Result { get; private set; }

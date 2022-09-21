@@ -1,7 +1,7 @@
 ﻿using Renci.SshNet;
 using System;
 
-namespace CleanLib.Common.SSH {
+namespace CleanLib.SSH {
     public class SshConnectionMethods : IDisposable {
         private bool _disposedValue;
 

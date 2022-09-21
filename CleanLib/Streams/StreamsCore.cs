@@ -1,4 +1,4 @@
-﻿using CleanLib.Common.Enumerations.Extensions;
+﻿using CleanLib.Enumerations.Extensions;
 using System;
 using System.Collections;
 using System.Collections.Generic;

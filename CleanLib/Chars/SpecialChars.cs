@@ -1,4 +1,4 @@
-﻿namespace CleanLib.Common.Chars;
+﻿namespace CleanLib.Chars;
 
 public static class SpecialChars {
     /// <summary>alt + 0215: ×</summary>

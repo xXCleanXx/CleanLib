@@ -7,9 +7,7 @@ namespace CleanLib.Wpf.Extensions;
 public class EnumExtension : MarkupExtension {
     private readonly Base _enumExtensionBase;
 
-    public EnumExtension(Type enumType) {
-        this._enumExtensionBase = new Base(enumType);
-    }
+    public EnumExtension(Type enumType) => this._enumExtensionBase = new Base(enumType);
 
     public override object ProvideValue(IServiceProvider serviceProvider)
         => this._enumExtensionBase.ProvideValue();

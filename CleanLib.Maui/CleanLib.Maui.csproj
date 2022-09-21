@@ -18,6 +18,7 @@
   
 	<ItemGroup>
 	  <ProjectReference Include="..\CleanLib.Xaml\CleanLib.Xaml.csproj" />
+	  <ProjectReference Include="..\CleanLib\CleanLib.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

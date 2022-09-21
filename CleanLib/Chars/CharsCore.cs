@@ -2,7 +2,7 @@
 
 using System;
 
-namespace CleanLib.Common.Chars;
+namespace CleanLib.Chars;
 
 public static class CharsCore {
     /// <summary>Returns a character by its digit from 1-24.</summary>
