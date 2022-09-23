@@ -33,6 +33,9 @@ public abstract class EnumExtensionBase
 
     /// <summary>Gets an <see cref="IEnumerable{T}"/> of the descriptions of an <see cref="Enum"/>.</summary>
     /// <returns>The <see cref="IEnumerable{T}"/> of the descriptions of the <see cref="Enum"/>.</returns>
-    public IEnumerable<EnumDescription> ProvideValue()
-        => from Enum value in Enum.GetValues(this.EnumType) select new EnumDescription(value, value.GetEnumDescription());
+    public IEnumerable<EnumDescription> ProvideValue() {
+        IEnumerable<EnumDescription> descriptions = from Enum value in Enum.GetValues(this.EnumType) select new EnumDescription(value, value.GetEnumDescription());
+
+        return descriptions;
+    }
 }

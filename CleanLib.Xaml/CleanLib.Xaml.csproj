@@ -5,10 +5,9 @@
     <Nullable>disable</Nullable>
     <Authors>Sebastian Erdweg</Authors>
     <Copyright>©2022 Sebastian Erdweg</Copyright>
-    <Version>1.0.0.1</Version>
+    <Version>1.0.0.2</Version>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CleanLib\CleanLib.Common.csproj" />
     <ProjectReference Include="..\CleanLib\CleanLib.csproj" />
   </ItemGroup>
 </Project>

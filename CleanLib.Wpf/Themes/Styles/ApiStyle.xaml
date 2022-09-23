@@ -11,13 +11,13 @@
     <SolidColorBrush x:Key="primaryBrush" Color="{StaticResource apiBlueColor}"/>
     <SolidColorBrush x:Key="secondaryBrush" Color="{StaticResource secondaryColor}"/>
     <SolidColorBrush x:Key="tertiaryBrush" Color="{StaticResource tertiaryColor}"/>
-    <SolidColorBrush x:Key="accentBrush" Color="{StaticResource accentColor}"/>
+    <!--<SolidColorBrush x:Key="accentBrush" Color="{StaticResource accentColor}"/>-->
     <SolidColorBrush x:Key="foregroundBrush" Color="{StaticResource lightGrayColor}"/>
     <SolidColorBrush x:Key="backgroundBrush" Color="{StaticResource grayColor}"/>
 
     <CornerRadius x:Key="cornerRadius">10</CornerRadius>
 
-    <Style x:Key="focusVisualStyle">
+    <!--<Style x:Key="focusVisualStyle">
         <Setter Property="Control.Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -25,12 +25,13 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-    </Style>
+    </Style>-->
+   
     
     <Style x:Key="buttonBaseStyle" TargetType="Button">
         <Setter Property="Background" Value="{StaticResource apiBlueBrush}"/>
         <Setter Property="Foreground" Value="{StaticResource foregroundBrush}"/>
-        <Setter Property="FocusVisualStyle" Value="{StaticResource focusVisualStyle}"/>
+        <!--<Setter Property="FocusVisualStyle" Value="{StaticResource focusVisualStyle}"/>-->
         <Setter Property="OverridesDefaultStyle" Value="True"/>
 
         <Style.Triggers>

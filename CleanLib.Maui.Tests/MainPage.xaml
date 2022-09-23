@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:clean="clr-namespace:CleanLib.Maui.Extensions;assembly=CleanLib.Maui"
+             xmlns:ee="clr-namespace:CleanLib.Xaml.Extensions;assembly=CleanLib.Xaml"
              xmlns:local="clr-namespace:CleanLib.Maui.Tests"
              x:Class="CleanLib.Maui.Tests.MainPage">
     <ScrollView>
@@ -14,9 +15,9 @@
                 Source="dotnet_bot.png"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"/>
 
-            <Picker ItemsSource="{Binding Source={clean:Enum {x:Type local:EnumTest}}}" ItemDisplayBinding="{Binding Description}"/>
+            <Picker x:Name="picker" ItemsSource="{Binding Source={clean:Enum EnumType={x:Type local:EnumTest}}, Mode=OneTime}" ItemDisplayBinding="{Binding Description}" x:DataType="ee:EnumDescription"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

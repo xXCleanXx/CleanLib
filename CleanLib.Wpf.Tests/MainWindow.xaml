@@ -17,12 +17,14 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             
             <Button Content="Button" Style="{StaticResource buttonStyle}" Margin="10"/>
             <Button Content="Round Button" Style="{StaticResource roundButtonStyle}" Margin="10" Grid.Column="1"/>
             <ProgressBar Style="{StaticResource progressBarStyle}" Value="90" Margin="10" Grid.Row="1"/>
-            <ComboBox ItemsSource="{Binding Source={clean:Enum local:TestEnum}}" Grid.Column="1" Grid.Row="1"/>
+            <!--<ComboBox ItemsSource="{Binding Source={clean:Enum local:TestEnum}}" Grid.Column="1" Grid.Row="1"/>-->
+            <clean:SearchBar SearchText="Hello World" Command="{Binding SearchCommand, Mode=OneWay}" Grid.Column="1" Grid.Row="1"/>
             <DataGrid Style="{StaticResource dataGridStyle}" Grid.Row="2" Grid.ColumnSpan="2">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Test"/>
