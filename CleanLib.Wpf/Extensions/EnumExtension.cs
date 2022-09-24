@@ -9,8 +9,7 @@ public class EnumExtension : MarkupExtension {
 
     public EnumExtension(Type enumType) => this._enumExtensionBase = new Base(enumType);
 
-    public override object ProvideValue(IServiceProvider serviceProvider)
-        => this._enumExtensionBase.ProvideValue();
+    public override object ProvideValue(IServiceProvider serviceProvider) => this._enumExtensionBase.ProvideValue();
 
     private sealed class Base : EnumExtensionBase {
         internal Base(Type enumType) : base(enumType) { }

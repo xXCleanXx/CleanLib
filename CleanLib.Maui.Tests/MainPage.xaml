@@ -4,20 +4,13 @@
              xmlns:clean="clr-namespace:CleanLib.Maui.Extensions;assembly=CleanLib.Maui"
              xmlns:ee="clr-namespace:CleanLib.Xaml.Extensions;assembly=CleanLib.Xaml"
              xmlns:local="clr-namespace:CleanLib.Maui.Tests"
+             x:DataType="local:MainPage"
              x:Class="CleanLib.Maui.Tests.MainPage">
     <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+        <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
+            <Image Source="dotnet_bot.png" SemanticProperties.Description="Cute dot net bot waving hi to you!" HeightRequest="200" HorizontalOptions="Center"/>
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center"/>
-
-            <Picker x:Name="picker" ItemsSource="{Binding Source={clean:Enum EnumType={x:Type local:EnumTest}}, Mode=OneTime}" ItemDisplayBinding="{Binding Description}" x:DataType="ee:EnumDescription"/>
+            <Picker x:Name="picker" Title="Test" ItemsSource="{Binding Source={clean:Enum {x:Type local:EnumTest}}}" SelectedItem="{Binding Selected}" ItemDisplayBinding="{Binding Description}"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
